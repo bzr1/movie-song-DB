@@ -1,0 +1,47 @@
+{% include 'top.html' %}
+<div class="content">
+    <div class="container details">
+
+        <h2 class="title"> Add Movie </h2>
+
+<!-- 
+    Podcast Schema
+    CREATE TABLE Podcast (
+    podcast_id SERIAL PRIMARY KEY,
+    podcast_title VARCHAR(250),
+    podcast_uri text,
+    podcast_last_updated DATE
+);
+Associated Media_id information
+    - storage location
+Assiciated Meta data
+    - description
+    - artwork
+-->
+
+        <form class="Add" method="POST" action="{{url_for('add_movie')}}"></form>
+
+            Podcast title: <input type = "text" name="podcast_title" value="Empty Podcast" placeholder="Podcast name">
+            Podcast uri: <input type="text" name="podcast_uri" value="Empty URI" placeholder="Podcast URI">
+            Podcast last updated: <input type="text" name="podcast_last_updated" value="Empty Last Updated" placeholder="Podcast Last Updated">
+            Podcast Episode Count: <input type="text" name="podcast_episode_count" value="Empty Episode Count" placeholder="Podcast Episode Count">
+            <br/>
+            Storage location: <input type="text" name="storage_location" value="no location" placeholder="Storage location">
+            <br/>
+            Description: <input type="text" name="description" value="no description" placeholder="Description">
+            Artwork: <input type="text" name="artwork" value="notfound.png" placeholder="notfound.png">
+            <br/>
+            <button class="flat" type="submit">Add</button>
+            <br/>
+            <hr/>
+            <hr/>
+            <hr/>
+            
+
+        </form>
+        <br/>
+        <div>
+
+    </div>
+</div>
+{% include 'bottom.html'%}
